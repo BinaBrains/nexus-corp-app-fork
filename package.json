@@ -1,0 +1,29 @@
+{
+  "name": "nexus-corp-app",
+  "version": "1.0.0",
+  "description": "The Nexus Corp application - used in DevOps Flow Lab missions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Criscadinu/nexus-corp-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Criscadinu/nexus-corp-app/issues"
+  },
+  "homepage": "https://github.com/Criscadinu/nexus-corp-app#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
+  }
+}
