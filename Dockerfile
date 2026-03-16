@@ -9,4 +9,4 @@ COPY src/ ./src/
 
 EXPOSE 3000
 
-# TODO: add the command to start the app
+CMD ["node", "src/index.js"]

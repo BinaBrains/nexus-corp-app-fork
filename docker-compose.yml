@@ -1,10 +1,27 @@
-version: "3.9"
-
 services:
-  app:
+  dev:
     build: .
     ports:
       - "3000:3000"
     environment:
+      - NODE_ENV=development
+      - APP_VERSION=1.0.0-dev
       - PORT=3000
-      - APP_VERSION=${APP_VERSION:-1.0.0}
+
+  test:
+    build: .
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=test
+      - APP_VERSION=1.0.0-test
+      - PORT=3000
+
+  prod:
+    build: .
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=production
+      - APP_VERSION=1.0.0
+      - PORT=3000
