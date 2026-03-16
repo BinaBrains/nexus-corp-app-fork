@@ -23,5 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # TODO (M-02): add a test step here
+      - name: Run tests
+        run: npm test
       # TODO (M-03): add a deploy step here

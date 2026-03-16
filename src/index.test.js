@@ -6,7 +6,7 @@ describe("GET /", () => {
     const res = await request(app).get("/");
     expect(res.statusCode).toBe(200);
     // BUG: wrong expected value — fix me!
-    expect(res.body.company).toBe("Acme Inc");
+    expect(res.body.company).toBe("Nexus Corp");
   });
 });
 
@@ -15,7 +15,7 @@ describe("GET /health", () => {
     const res = await request(app).get("/health");
     expect(res.statusCode).toBe(200);
     // BUG: wrong expected value — fix me!
-    expect(res.body.status).toBe("healthy");
+    expect(res.body.status).toBe("ok");
   });
 });
 
@@ -24,6 +24,6 @@ describe("GET /api/orders", () => {
     const res = await request(app).get("/api/orders");
     expect(res.statusCode).toBe(200);
     // BUG: wrong expected length — fix me!
-    expect(res.body).toHaveLength(10);
+    expect(res.body).toHaveLength(3);
   });
 });
