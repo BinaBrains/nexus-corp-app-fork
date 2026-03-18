@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
     company: "Nexus Corp",
     status: "running",
     version: process.env.APP_VERSION || "1.0.0",
+    deployedAt: new Date().toISOString()
   });
 });
 
