@@ -25,4 +25,6 @@ jobs:
 
       - name: Run tests
         run: npm test
-      # TODO (M-03): add a deploy step here
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main' && success()
+        run: echo 'Deploy step - replace with your platform CLI command'
